@@ -64,7 +64,6 @@
     var svgDiv = getDisplayDiv(slide);
 
     svgDiv.innerHTML = dataElem.innerHTML;
-    svgDiv.classList.add('svgdiv');
 
     mermaid.flowchartConfig
     var config = {};
