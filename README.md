@@ -20,7 +20,7 @@ I preferred not to use markdown in my slides. I found just having mermaid tagged
 3. Create diagram in slide. Example:
 ```
   <section class="diagram-slide">
-    <span class="diagram-data">
+      <span class="diagram-data" style="display:none;">
 graph LR;
   A(AAAA)==> B(B node);
   B==> C(SEE SEE);
@@ -28,6 +28,10 @@ graph LR;
   class A diag-a-styles;
   class B diag-b-styles
   class C diag-c-styles;
+      </span>
+      <!-- Diagram will be displayed in this DIV -->
+      <div class="diagram-display">
+      </div>
   </section>
 ```
 
@@ -37,7 +41,7 @@ This plugin uses CSS classes to figure out what to render.
 
 * "diagram-slide" is used to mark a slide that has a mermaid diagram. Note that you can only have one diagram per slide (it doesn't seem like the audience can really comprehend more than one per slide anyway). This class tagging is used with Reveal's 'slidechanged' event.
 * "diagram-data" should tag a span or other element containing the mermaid graph declaration. Note that you probably want to mark that as 'display: none' in your CSS.
-* "diagram-div" class should mark an empty div where you want the diagram to appear.
+* "diagram-display" class should mark an empty div where you want the diagram to appear.
 
 Note: It's possible diagram-data & diagram-div could be combined but I went thru several iterations of making this work reliably.
 
