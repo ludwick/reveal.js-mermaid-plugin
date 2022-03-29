@@ -1,6 +1,10 @@
 # reveal.js-mermaid-plugin
 A very basic [mermaid](https://github.com/knsv/mermaid) plugin for [reveal.js](https://github.com/hakimel/reveal.js)
 
+## Project Status
+
+This project is essentially retired. Feel free to fork and change however you like!
+
 ## How It Works
 
 I preferred not to use markdown in my slides. I found just having mermaid tagged classes messed up with the overall presentation in bad ways. So this plugin adds and removes data for mermaid to process on each slide change. So when slides change, it checks the previous slide and destroys any SVG created by mermaid and creates an svg in the current slide (only if tagged as a diagram slide).
